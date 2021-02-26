@@ -1,3 +1,4 @@
+
 import numpy as np
 
 class Search(object):
@@ -119,3 +120,6 @@ def update(T, h, a, reward):
     T[ha]['N']=T[ha]['N']+1
     T[ha]['V']=T[ha]['V']+(reward-T[ha]['V'])/T[ha]['N']
     return T
+        
+            
+  
