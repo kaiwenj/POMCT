@@ -49,7 +49,7 @@ class TestExpand(unittest.TestCase):
     @data(((0, 3), {(0, 1, 0): {'N': 25, 'V': 12},
                 (0, 2, 0): {'N': 31, 'V': 16},
                 (0, 1): {'N': 31, 'V': -1},
-                (0, 3): {'N': 3, 'V': 1},
+                (0, 3): {'N':0},
                 (0, 3, 0): {'N': 0, 'V': 0},
                 (0, 3, 1): {'N': 0, 'V': 0},
                 (0, 3, 2): {'N': 0, 'V': 0}}))
@@ -60,7 +60,7 @@ class TestExpand(unittest.TestCase):
         self.assertEqual(calculatedResult, expectedResult)
         
     @data(((0, 1), {(0, 2, 0): {'N': 31, 'V': 16},
-                (0, 1): {'N': 31, 'V': -1},
+                (0, 1): {'N':0},
                 (0, 3): {'N': 3, 'V': 1},
                 (0, 1, 0): {'N': 0, 'V': 0},
                 (0, 1, 1): {'N': 0, 'V': 0},
@@ -71,7 +71,7 @@ class TestExpand(unittest.TestCase):
         calculatedResult=expand(h)
         self.assertEqual(calculatedResult, expectedResult)
     
-    @data(((0, 1, 0), {(0, 1, 0): {'N': 25, 'V': 12},
+    @data(((0, 1, 0), {(0, 1, 0): {'N':0},
                 (0, 2, 0): {'N': 31, 'V': 16},
                 (0, 1): {'N': 31, 'V': -1},
                 (0, 3): {'N': 3, 'V': 1},
